@@ -1,0 +1,2 @@
+Welcome to my repository! This will be mainly used for school projects, websites, code tests, etc. For now, it only has my first HTML website, Scamazon. Feel free to go to cario08.github.io to check it out! 
+Once more projects are posted, I will turn the main website link into a "home page" of sorts, allowing you to see different projects as I progress. Python tests will probably come next. Stay tuned!
