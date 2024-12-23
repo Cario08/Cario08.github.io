@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cario Vault</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header img {
+      height: 70px; /* Increased logo size */
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1200px;
+    }
+    .main-section, .sidebar {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .main-section {
+      flex: 3;
+    }
+    .sidebar {
+      flex: 1;
+      max-width: 300px;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+    }
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      text-decoration: none; /* Remove underlines */
+    }
+    .sidebar a#drive {
+      background: #000; /* Black color */
+      color: #fff;
+      border-radius: 30px;
+    }
+    .sidebar a#caleb {
+      background: #fff;
+      color: #333;
+      border: 2px solid #000; /* Black border around Caleb Hotels */
+      border-radius: 30px;
+    }
+    .sidebar a#scamazon {
+      background: #c29e76; /* Cardboard box color */
+      color: #fff;
+      border-radius: 30px;
+    }
+    .sidebar a:hover {
+      background: #e6e6e6;
+    }
+    .sidebar .developer-tools {
+      margin-top: 20px;
+    }
+    .main-section p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/cario.png" alt="Logo"> <!-- Changed to cario.png -->
+  </header>
+  <div class="container">
+    <div class="main-section">
+      <!-- Updated body text -->
+      <p><strong>Welcome to CarioVault.</strong> The home of ongoing projects, past projects, and Caleb Hotels! Use the links on the right to access different parts of the site.</p>
+
+      <h2>Ongoing project:</h2>
+      <p><strong>Z:/ Drive</strong><br>A mix of analog horror, company tapes, and modern media to create a cohesive story.<br>Dilation and Recursion Industries are in production. <strong>The link is not up yet. Coming 2025.</strong></p>
+
+      <h2>Caleb Hotels:</h2>
+      <p>After your stay in one of our suites, leave a review! You can also leave a complaint or suggestion.</p>
+      
+      <h2>Past Project:</h2>
+      <p><strong>Scamazon</strong><br>My first HTML site I made for a college class.</p>
+    </div>
+    <div class="sidebar">
+      <h2>Links</h2>
+      <a href="Z:/" id="drive">Z:/ Drive (WIP)</a>
+      <a href="CalebHotels/CalebHotels.html" id="caleb">Caleb Hotels</a>
+      <a href="Scamazon/index.html" id="scamazon">Scamazon</a>
+    </div>
+  </div>
+</body>
+</html>
