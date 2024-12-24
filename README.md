@@ -1,2 +1,8 @@
-Welcome to my repository! This will be mainly used for school projects, websites, code tests, etc. For now, it only has my first HTML website, Scamazon. Feel free to go to cario08.github.io to check it out! 
-Once more projects are posted, I will turn the main website link into a "home page" of sorts, allowing you to see different projects as I progress. Python tests will probably come next. Stay tuned!
+Welcome to CarioVault. Home of the Z:/ Drive, Caleb Hotels, and Scamazon.
+Z:/ Drive
+A mix of analog horror, company tapes, and modern media to create a cohesive story.
+Dilation and Recursion Industries are in production. The link is not up yet. Coming 2025.
+Caleb Hotels
+After your stay in one of our suites, leave a review! You can also leave a complaint or suggestion.
+Scamazon
+My first HTML site I made for a college class.
