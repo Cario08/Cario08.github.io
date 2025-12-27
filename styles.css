@@ -195,7 +195,7 @@ footer .hidden-text {
     nav ul {
         flex-direction: row;
         justify-content: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     nav ul li {
@@ -243,3 +243,4 @@ footer .hidden-text {
         max-height: 220px;
     }
 }
+
