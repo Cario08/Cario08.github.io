@@ -100,7 +100,7 @@ main {
     color: #555;
 }
 
-/* Styles for Home Page Images */
+/* Home Page Images */
 .image-grid {
     display: flex;
     justify-content: space-between;
@@ -130,13 +130,16 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Styles for Caleb Hotels Images and Video */
+/* Caleb Hotels Media (DESKTOP DEFAULT — UNCHANGED) */
 .hotel-image,
 .hotel-video {
     flex: 1 1 calc(33.33% - 20px);
     max-width: calc(33.33% - 20px);
     height: auto;
     border-radius: 10px;
+}
+
+.hotel-image {
     pointer-events: none;
 }
 
@@ -189,11 +192,10 @@ footer .hidden-text {
         align-items: center;
     }
 
-    /* Keep nav buttons horizontal on mobile */
     nav ul {
         flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     nav ul li {
@@ -201,9 +203,8 @@ footer .hidden-text {
     }
 
     nav ul li a {
-        font-size: 1rem;
-        padding: 8px 14px;
-        text-align: center;
+        font-size: 0.95rem;
+        padding: 6px 10px;
     }
 
     .intro-text h1 {
@@ -218,192 +219,27 @@ footer .hidden-text {
         flex-direction: column;
     }
 
-    .description-item {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-
+    .description-item,
     .description-item.half-width {
         flex: 1 1 100%;
     }
 
-    /* Stack home page images vertically & full width */
+    /* Stack home page images */
     .image-grid {
         flex-direction: column;
         gap: 15px;
     }
 
     .home-image {
-        flex: 1 1 100%;
         max-width: 100%;
     }
 
-    /* Stack hotel images & video vertically */
+    /* FIX: Caleb Hotels media ONLY on mobile */
     .hotel-image,
     .hotel-video {
-        flex: 1 1 100%;
         max-width: 100%;
-        margin: 10px 0;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        max-height: 220px;
     }
 }
-
-/* Updated Styles for Reviews Page */
-.review-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: left;
-}
-
-.review-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.review-form input[type="text"],
-.review-form textarea {
-    width: calc(100% - 40px);
-    padding: 10px 20px;
-    margin: 0 auto 15px auto;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.review-form textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/* Updated Star Rating Styles */
-.star-rating {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    gap: 5px;
-    flex-direction: row-reverse;
-}
-
-.star-rating input[type="radio"] {
-    display: none;
-}
-
-.star-rating label {
-    font-size: 2rem;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.star-rating label:hover,
-.star-rating label:hover ~ label,
-.star-rating input[type="radio"]:checked ~ label {
-    color: #ffcc00;
-}
-
-/* Style Submit Button Like Link Buttons */
-.review-form button {
-    background-color: #333;
-    color: #fff;
-    border: 2px solid transparent;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: block;
-    margin: 0 auto;
-    font-weight: bold;
-}
-
-.review-form button:hover {
-    background-color: #00bcd4;
-    color: #fff;
-    border-color: #00bcd4;
-}
-
-/* Styles for Previous Reviews */
-.previous-reviews {
-    margin-top: 40px;
-    text-align: left;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.review-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.review-item h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.review-item .stars {
-    color: #ffcc00;
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.review-item p {
-    margin: 10px 0;
-    color: #555;
-}
-
-.review-item .date {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-/* Sort Options */
-.sort-options {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.sort-options label {
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 1rem;
-}
-
-.sort-options select {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #fff;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 200px;
-    height: 40px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-}
-
-.sort-options select:hover,
-.sort-options select:focus {
-    border-color: #00bcd4;
-    outline: none;
-}
-
-
