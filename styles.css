@@ -275,10 +275,6 @@ footer {
     text-align: center;
 }
 
-footer .hidden-text {
-    color: #333;
-}
-
 /* Mobile */
 @media (max-width: 768px) {
     header {
@@ -311,3 +307,4 @@ footer .hidden-text {
         max-height: 220px;
     }
 }
+
