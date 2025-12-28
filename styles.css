@@ -62,6 +62,7 @@ main {
     color: #666;
 }
 
+/* Description Cards */
 .description {
     display: flex;
     flex-direction: column;
@@ -72,32 +73,19 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 20px;
 }
 
 .description-item {
     flex: 1 1 100%;
     margin: 10px;
-    text-align: center;
-    background-color: #fff;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .description-item.half-width {
     flex: 1 1 45%;
-    margin: 10px;
-}
-
-.description-item h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.description-item p {
-    font-size: 1rem;
-    color: #555;
 }
 
 /* Home Page Images */
@@ -105,14 +93,13 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 20px 0;
     gap: 10px;
+    margin: 20px 0;
 }
 
 .home-image {
     flex: 1 1 calc(33.33% - 10px);
     max-width: calc(33.33% - 10px);
-    text-align: center;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -120,23 +107,21 @@ main {
 
 .home-image img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
     display: block;
 }
 
 .home-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Caleb Hotels Media (DESKTOP DEFAULT — UNCHANGED) */
+/* Caleb Hotels Media (desktop default) */
 .hotel-image,
 .hotel-video {
     flex: 1 1 calc(33.33% - 20px);
     max-width: calc(33.33% - 20px);
-    height: auto;
     border-radius: 10px;
+    height: auto;
 }
 
 .hotel-image {
@@ -147,59 +132,158 @@ main {
     pointer-events: auto;
 }
 
-/* Review Button Styles */
+/* Review Button */
 .review-button a {
-    text-decoration: none;
+    display: inline-block;
+    background: #333;
     color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
     padding: 10px 20px;
-    border: 2px solid transparent;
+    font-size: 1.2rem;
     border-radius: 5px;
-    background-color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .review-button a:hover {
     background-color: #00bcd4;
-    color: #fff;
-    border-color: #00bcd4;
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
+/* ===================== */
+/* Reviews Page Styles   */
+/* ===================== */
+
+.review-form {
+    background: #fff;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
 }
 
-footer p {
+.review-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.review-form textarea {
+    min-height: 100px;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    flex-direction: row-reverse;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #ffcc00;
+}
+
+.review-form button {
+    background: #333;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.review-form button:hover {
+    background-color: #00bcd4;
+}
+
+.previous-reviews {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.review-item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.review-item h3 {
     margin: 0;
-    font-size: 1rem;
+}
+
+.review-item .stars {
+    color: #ffcc00;
+    margin: 5px 0;
+}
+
+.review-item .date {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.sort-options {
+    margin-bottom: 20px;
+}
+
+.sort-options select {
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 footer .hidden-text {
     color: #333;
-    display: block;
 }
 
-/* Mobile Responsive Styles */
+/* Mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
     }
 
     nav ul {
-        flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav ul li {
-        margin: 5px;
+        flex-wrap: nowrap;
     }
 
     nav ul li a {
@@ -207,34 +291,15 @@ footer .hidden-text {
         padding: 6px 10px;
     }
 
-    .intro-text h1 {
-        font-size: 2rem;
-    }
-
-    .intro-text p {
-        font-size: 1rem;
-    }
-
-    .description-row {
-        flex-direction: column;
-    }
-
-    .description-item,
-    .description-item.half-width {
-        flex: 1 1 100%;
-    }
-
-    /* Stack home page images */
     .image-grid {
         flex-direction: column;
-        gap: 15px;
     }
 
     .home-image {
         max-width: 100%;
     }
 
-    /* FIX: Caleb Hotels media ONLY on mobile */
+    /* FIX: hotel media only on mobile */
     .hotel-image,
     .hotel-video {
         max-width: 100%;
@@ -243,4 +308,3 @@ footer .hidden-text {
         max-height: 220px;
     }
 }
-
