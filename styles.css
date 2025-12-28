@@ -24,6 +24,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
@@ -39,6 +40,7 @@ nav ul li a {
     border: 2px solid transparent;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -161,6 +163,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: left;
+    box-sizing: border-box; /* FIX */
 }
 
 .review-form label {
@@ -176,6 +179,7 @@ main {
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box; /* FIX */
 }
 
 .review-form textarea {
@@ -263,7 +267,7 @@ main {
     border-radius: 5px;
 }
 
-/* Footer */
+/* Footer (RESTORED) */
 footer {
     background: #333;
     color: #fff;
@@ -299,7 +303,6 @@ footer .hidden-text {
         max-width: 100%;
     }
 
-    /* FIX: hotel media only on mobile */
     .hotel-image,
     .hotel-video {
         max-width: 100%;
